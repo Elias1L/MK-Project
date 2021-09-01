@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="MKLOGO.png">
+    <link href="https://fonts.googleapis.com/css2?family=Tourney&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <title>Scorpion</title>
+    
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: "MK4";
+    src: url(MK4.TTF) format("truetype");
+}
+
+
+/* LANDING SECTION */
+.landing {
+    position: relative;
+    background-image: url(scorpion_2.jpg);
+    height: 800px;
+    width: 100%; 
+    background-position: center;
+    background-size: cover;
+    border: 5px solid rgb(7, 7, 7);
+    image-rendering:pixelated;
+    
+} 
+
+
+h1{
+    position: absolute;
+    top:300px;
+    left:270px;
+    filter: url(#fire);
+    font-family: 'Tourney', cursive;
+    color: #ffeb3b;
+    font-weight: 60;
+    font-size: 200px;
+    text-shadow: 0 0 10px #ff8c3b,
+                     0 0 40px #ff8c3b,
+                     0 0 80px #ff8c3b,
+                     0 0 160px #ff8c3b,
+                     0 0 240px #ff8c3b;             
+    }
+
+body {
+    background: url(Burning.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+/* Informatiesectie */
+.block {
+	position: relative;
+	margin: 300px auto 0;
+	width: 1300px;
+	height: 2400px;
+	background: linear-gradient(0deg, #000, #272727);
+}
+
+.block:before, .block:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, red, yellow, red,yellow, #ff0000, yellow, 
+		red, yellow,red, yellow);
+	background-size: 600%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: flow 20s linear infinite;
+}
+
+@keyframes flow {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.block:after {
+	filter: blur(50px);
+}
+
+.vid{
+    padding: 0px;
+    margin:0px;
+}
+
+.audio{
+    visibility: hidden;
+}
+
+
+
+
+/* <--------!Profilecard---------> */
+.Infocard{
+    position: absolute;
+    left:900px;
+    width: 350px;
+    height: 820px;
+    background-color: rgb(53, 53, 53);
+    border: 2px solid rgb(97, 97, 97);
+    top: 50px;
+    border: 2px solid rgb(255, 238, 0);
+    border-radius: 25px;
+}
+
+
+/* Vuur voor achter de infokaart test */
+/* .fire{
+    width: 360px;
+    height: 810px;
+    background-color: rgb(219, 59, 59);
+    filter: url(#fire);
+    box-shadow:        0 0 10px #ff8c3b,
+                       0 0 40px #ff8c3b,
+                       0 0 80px #ff8c3b,
+                       0 0 160px #ff8c3b,
+                       0 0 240px #ff8c3b;
+    
+} */
+
+
+.ScorProfile{
+    position: relative;
+    top:5px;
+    width: 346px;
+    border: 1px solid red;
+}
+
+.grey{
+    position: relative;
+    width: 200px;
+    height:35px;
+    background-color: rgb(2, 2, 2);
+    left:80px;
+    top:2px;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+.InfoScor{
+    color: white;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.Scorpion{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    border-radius: 50px;
+    font-family: "MK4";
+}
+
+.Quote{
+    position: relative;
+    left:20px;
+    top:20px;
+    font-size: 30px;
+    color: yellow;
+    font-family: "MK4";
+}
+
+.Han{
+    color: white;
+}
+
+.TextInfo{
+    color: white;
+    font-size: 25px;
+    line-height: 30px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+
+
+
+/* Skills and Weapon Section */
+
+.Skillsblock {
+	position: relative;
+	margin: 30px auto 0;
+	width: 1300px;
+	height: 280px;
+	background: linear-gradient(0deg, #000, #272727);
+}
+
+.Skillsblock:before, .block:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, red, yellow, red,yellow, #ff0000, yellow, 
+		red, yellow,red, yellow);
+	background-size: 600%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: flow 20s linear infinite;
+}
+
+.WeaponsSkills{
+    position: relative;
+    filter: url(#fire);
+    font-family: "MK4";
+    text-align: center;
+    color: #ffffff;
+    font-weight: 10;
+    font-size: 150px;
+    -webkit-box-reflect: below -120px linear-gradient
+    (transparent, #0008) ;
+    text-shadow: 0 0 10px #ff8c3b,
+                     0 0 40px #ff8c3b,
+                     0 0 80px #ff8c3b,
+                     0 0 160px #ff8c3b,
+                     0 0 240px #ff8c3b;
+}
+
+
+/* IMG Slider */
+
+.Imgslider {
+	position: relative;
+	margin: 300px auto 0;
+	width: 1300px;
+	height: 280px;
+	background: linear-gradient(0deg, #000, #272727);
+}
+
+.Imgslider:before, .block:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, red, yellow, red,yellow, #ff0000, yellow, 
+		red, yellow,red, yellow);
+	background-size: 600%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: flow 20s linear infinite;
+}
+
+
+/* Extra info */
+
+.Extrainfo {
+	position: relative;
+	margin: 300px auto 0;
+	width: 1300px;
+	height: 280px;
+	background: linear-gradient(0deg, #000, #272727);
+}
+
+.Extrainfo:before, .block:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, red, yellow, red,yellow, #ff0000, yellow, 
+		red, yellow,red, yellow);
+	background-size: 600%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: flow 20s linear infinite;
+}
+
+
+
+
+                    /* RESPONSIVENESS (NOT FINISHED) */
+
+@media only screen and (max-width:768px){
+
+body{
+    background: url(Burning.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.landing {
+width: 100%;
+height: 500px;
+} 
+
+h1 {
+font-size:120px;
+left:85px;
+top:250px;  
+}
+
+.block {
+position: relative;
+left:2.5px;
+width: 765px;
+height: 2300px;
+}
+
+.TextInfo{
+    font-size: 11.6px;
+}
+
+.Infocard{
+    height:600px;
+    width:310px;
+    top:120px;
+    left:410px;
+    font-size: 11.6px;
+}
+
+.Quote{
+    font-size: 25px;
+    left:0px;
+    padding-left:32px;
+}
+
+.Scorpion{
+    font-size: 20px;
+}
+
+.grey{
+    height:25px;
+    width:100px;
+    left:125px;
+}
+
+.ScorProfile{
+    height: 200px;
+    width: 307px;
+    image-rendering: pixelated;
+}
+
+.WeaponsSkills{
+left:0px;
+}
+
+.Skillsblock {
+width: 100%;
+left:15px;
+}
+
+.Imgslider {
+left:15px;
+}
+
+.Extrainfo {
+left:15px;
+}
+
+.WeaponsSkills{
+font-size: 80px;
+text-align: center;
+filter:none;
+left:0px;
+}
+
+.Skillsblock{
+    width: 730px;
+    left:0px;
+}
+
+.Imgslider{
+    width:730px;
+    left:0px;
+}
+
+.Extrainfo{
+    width:730px;
+    left:0px;
+}
+}
+
+
+    </style>
+</head>
+
+<body> 
+    
+                            <!-- LANDING SECTION -->
+
+    <div class="landing"> 
+        <audio controls autoplay class="audio"><source src="Fire.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.</audio>
+      <h1>Scorpion</h1>
+    </div>
+
+                            <!-- END OF LANDING SECTION -->
+
+                                <!-- STORY LINE -->
+
+    <div class="block">
+        <p class="Quote">"Willpower is what makes your destiny your own,<br> 
+                         &nbsp learn to be strong at heart and in mind."<br><br>
+                        <p class="Han">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            -Hanzo Hasashi to his Son Satoshi in the movie Scorpion's Revenge</p></p>
+                        <pre class="TextInfo">
+                            
+    Hanzo Hasashi's Story.                        
+    
+    In a sudden attack, the Lin Kuei ninja clan invades 
+    its rival clan Shirai Ryu and slaughters everyone,
+    including the wife of grandmaster Hanzo Hasashi. 
+    When Hasashi and his son, Satoshi return from the jungle,
+    they find their clan dead at night. 
+    Lin Kuei’s men attack Hasashi and his son but he kills them all when
+    suddenly the grandmaster of Lin Kuei,
+    Sub-Zero freezes Hasashi and mercilessly slaughters him and his young son.
+    Hasashi wakes up in chains in the depths of hell called Netherrealm.
+    Hasashi was mysteriously saved and resurrected by the sorcerer Quan Chi.
+    Quan Chi wants Hasashi to attend the Mortal Kombat tournament 
+    organized by Shang Tsung, and steal a key from his temple.
+    The key will unlock the prison that has locked
+    Quan Chi’s master, Shinnok, for a long time.
+    In return for his favor, Quan Chi promises that his master has the power
+    to bring back Hasashi’s slaughtered family 
+    and even send him back to the mortal realm. 
+    He also lures Hasashi by informing him that his rival 
+    Sub-Zero will be attending the tournament. 
+    Hasashi, burning with the fire of vengeance 
+    transforms himself into Scorpion and joins the tournament.                  
+    The protector of the Earth realm, Lord Raiden has forged
+    a team of fighters to fight for the Earth.
+    These fighters include Shaolin monk Liu Kang, 
+    Hollywood actor Johnny Cage and Special Forces agent Sonya Blade.                   
+    The runners-up of the Mortal Kombat tournament will fight against Shang Tsung’s champion Goro.
+    The winner will decide the fate of the Earth Realm.
+
+    Eventually Scorpion encounters Sub-Zero. 
+    At this point Scorpion still thinks that the Lin Kuei clan and Sub-Zero killed his clan and family.
+    To take his revenge from Sub-Zero, Scorpion jumps off on a spike pit that kills both of them. 
+    Quan Chi is angered by Scorpion’s move to kill himself and he curses him. 
+    He also informs him that it was Quan Chi who disguised as Sub-Zero and slaughtered Hasashi’s clan and wife, 
+    so as to persuade him to fight for him. But in the end, he was useless.
+    <video class="vid" width="620" height="440" controls>
+        <source src="Revelation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    Quan Shi reveals the truth about the death of Hanzo's family.
+
+    In the last battle of the tournament, Liu Kang is struggling against Goro.
+    He was about to be ripped apart when Scorpion saves his soul.
+    Scorpion kills Goro by pulling out his head from the spine.
+    Scorpion demands Quan Chi who is trapped in Shang Tsung’s inferno for poisoning Shang’s drink.
+    Shang Tsung offers Quan Chi and Earth realm to Scorpion if he wins the tournament and for that,
+    he has to fight against Liu Kang. Scorpion decides otherwise, and takes Shang Tsung hostage,
+    surrendering the fight to Liu Kang. Lord Raiden declared Liu Kang the winner and the earth realm is protected.
+    The temple, however, starts trembling and fighters make their move out of it.
+    In a massive battle, Scorpion avenges his family by killing Quan Chi. 
+    Shao Kahn is enraged with Outerworld’s defeat and prepares for battle against the Earth Realm.
+    He pledges to end the game, once and for all. Lord Raiden consoles a disappointed Liu Kang,
+    that he wasn’t destined to win against Goro but against Shao Kahn.
+    </pre>
+        <div class="Infocard"><div class="fire"></div>
+            <div class="grey"><p class="Scorpion">Scorpion</p></div>
+            <img class="ScorProfile" src="ScorpionProfile.jpg" alt="Scorpion">
+            <p class="InfoScor">
+                <br>
+                &nbspReal Name: Hanzo Hasashi <br> 
+                &nbsp(Scorpion after being reborn in the Netherrealm)
+                <br><br>
+                &nbspGender: Male
+                <br><br>
+                &nbspOrigin: Earthrealm (Japan, Osaka),
+                <br>
+                &nbsp(Reborn in the Netherrealm)
+                <br><br>
+                &nbspResides:
+                &nbsp1st Timeline: Netherrealm
+                <br><br>
+                &nbsp2nd Timeline: Earthrealm<br>
+                &nbsp(After the discovery of Quan Chi misleading &nbsp&nbspHanzo)
+                <br><br>
+                &nbspFamily: Harumi Hasashi (wife, deceased)<br> 
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbspSatoshi Hasashi (son, deceased)
+                <br><br>
+                &nbspClan: Shirai Ryu
+                <br><br>
+                &nbspWeapons: Kunai, Mugai Ryu
+                <br><br>
+                &nbspFighting Styles:Hapkido, Pi Gua and Moi Fah
+                <br><br>
+                &nbspEnemies: Lin kuei clan and Sub-Zero(Before &nbspknowing &nbspthe truth)
+                <br>
+                &nbspQuan Shi (After knowing the truth) 
+        </div>
+    </div>
+
+                                <!-- END OF STORY LINE -->
+
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br>
+
+
+                                <!-- SKILLS SECTION -->
+    <p class="WeaponsSkills">Weapons/Skills</p>
+    <div class="Skillsblock"></div>
+
+    <div class="Skillsblock"></div>
+    
+    <div class="Skillsblock"></div>
+
+
+
+    <div class="Imgslider"></div>
+
+    <div class="Extrainfo"></div>
+
+    <div class="svg-container">
+
+
+                               <!-- END OF SKILLS SECTION -->
+
+
+                            <!-- FIRE SVG ANIMATION -->
+   <svg>
+       <filter id="fire">
+           <feTurbulence id="turbulence" baseFrequency="0.1 0.
+           1" numOctaves="2" seed="3"</feTurbulence>
+        <animate attributeName="baseFrequency" dur="5s" values="0.1 0.1;0.12 0.12" repeatCount="indefinite"></animate></feTurbulence>
+           <feDisplacementMap in="SourceGraphic" scale="25"></feDisplacementMap>
+       </filter>
+   </svg>
+</div>
+</body>
+</html>
+
